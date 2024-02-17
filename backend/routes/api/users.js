@@ -27,6 +27,12 @@ const validateSignup = [
 
 const router = express.Router();
 
+router.get("/", async (req, res) => {
+    const allUsers = await User.findAll();
+
+    return res.json(allUsers);
+});
+
 router.post("/", validateSignup, async (req, res) => {
     const { email, password, username, firstName, lastName } = req.body;
     const hashedPassword = bcrypt.hashSync(password);
