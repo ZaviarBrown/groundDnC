@@ -28,6 +28,8 @@ const validateSignup = [
 const router = express.Router();
 
 router.get("/", async (req, res) => {
+    console.log("\n\n\n\n HELLLOOOOOOO \n\n\n\n");
+
     const allUsers = await User.findAll();
 
     return res.json(allUsers);
