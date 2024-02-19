@@ -3,6 +3,8 @@ const { Spot } = require('../../db/models');
 const { requireAuth } = require('../../utils/auth');
 const router = express.Router();
 
+// I fixed my error
+
 router.post('/', requireAuth, async (req, res) => {
     const {
         address,
