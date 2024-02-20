@@ -3,6 +3,8 @@ const { Spot } = require('../../db/models');
 const { requireAuth } = require('../../utils/auth');
 const router = express.Router();
 
+// Created the edit route and it now works perfectly!
+
 router.post('/', requireAuth, async (req, res) => {
     const {
         address,
